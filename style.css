@@ -80,7 +80,21 @@ section button {
     color: #F5F7F8; /* Cor do texto do botão */
     font-size: 1rem; /* Tamanho da fonte */
     cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    margin-right: 10rem;
 }
+
+.outros {
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.5rem; /* Borda arredondada */
+    background-color: #f3dc08; /* Cor de fundo do botão */
+    color: #000000; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    margin-right: -10rem; /* Ajuste do espaçamento à direita */
+    margin-top: -42px;
+}
+
 
 /* Adiciona efeito hover ao botão de pesquisa */
 section button:hover {
@@ -97,7 +111,7 @@ section button:hover {
     margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
     padding: 1rem; /* Espaçamento interno */
     border-radius: 0.6rem; /* Borda arredondada */
-    margin-left: -50rem;
+    margin-left: 0rem;
 }
 
 /* Estiliza cada item de resultado */
@@ -166,16 +180,28 @@ footer {
     }
 }
 
-/* Responsividade para celulares */
+/* Responsividade para celulares *//* Responsividade para celulares */
 @media (max-width: 480px) {
+
+    body {
+        padding: 1rem; /* Adiciona espaço ao redor para evitar que o conteúdo fique encostado nas bordas */
+    }
 
     h1 {
         font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
         letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
+        margin-left: 0; /* Remove a margem à esquerda */
+        text-align: center; /* Garante que o texto fique centralizado */
+    }
+
+    section {
+        margin-left: 0; /* Remove a margem à esquerda */
+        align-items: center; /* Garante que o conteúdo fique centralizado */
     }
 
     section input {
-        width: 17rem; /* Largura total dos inputs em telas pequenas */
+        width: 100%; /* Largura total dos inputs em telas pequenas */
+        max-width: 17rem; /* Limita a largura máxima */
     }
 
     section button {
@@ -183,9 +209,22 @@ footer {
         font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
     }
 
+    .outros {
+        margin-right: -5; /* Remove margem negativa */
+        margin-top: -5; /* Remove o espaçamento extra no topo */
+        
+    }
+
+    .minha-img {
+        height: 50rem; /* Reduz a altura da imagem para metade da altura da tela em telas pequenas */
+    
+    }
+
     .resultados-pesquisa {
-        width: 90%; /* Largura da caixa de resultados em telas pequenas */
+        width: 100%; /* Largura da caixa de resultados em telas pequenas */
         height: 50vh; /* Altura da caixa de resultados em telas pequenas */
+        margin-right: -380px; /* Remove margem negativa */
+        
     }
 
     .item-resultado h2 {
@@ -195,4 +234,5 @@ footer {
     footer {
         font-size: 0.9rem; /* Tamanho da fonte do rodapé em telas pequenas */
     }
+
 }
